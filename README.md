@@ -1,7 +1,6 @@
-# Queue
+# Queue - Simple fork to allow strings as queue names.
 
 This is a simple wrapper around Erlang's :queue module. Unlike other wrappers, this provides a simple interface for dealing with First In, First Out [FIFO](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) queues.
-
 # Examples
 ```elixir
 Queue.new(:q)
