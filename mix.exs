@@ -13,7 +13,7 @@ defmodule Queue.MixProject do
       # Docs
       name: "Queue",
       description: "A wrapper for Erlang's :queue. Build First In, First Out queues.",
-      source_url: "https://github.com/mrdougwright/queue",
+      source_url: "https://github.com/simplefirmware/queue",
       docs: [
         main: "Queue",
         extras: ["README.md"]
@@ -38,8 +38,8 @@ defmodule Queue.MixProject do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/mrdougwright/queue"},
-      maintainers: ["Doug Wright", "et al"],
+      links: %{"GitHub" => "https://github.com/simplefirmware/queue"},
+      maintainers: ["Ronald Colyar", "et al"],
       files: ["lib", "mix.exs", "README*"]
     ]
   end

@@ -6,12 +6,16 @@ defmodule Queue do
 
   @doc """
   Creates a new First In, First Out queue using Erlang's :queue
+  name can be either a string or atom.
 
   ## Examples
       {:ok, pid} = Queue.new(:my_queue)
   """
   def new(name) do
-    Agent.start_link(fn -> {[], []} end, name: name)
+    case is_atom(name) do
+      true -> Agent.start_link(fn -> {[], []} end, name: name)
+      false -> Agent.start_link(fn -> {[], []} end, name: String.to_atom(name))
+    end
   end
 
   @doc """
